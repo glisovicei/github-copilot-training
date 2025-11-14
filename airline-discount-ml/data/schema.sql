@@ -1,0 +1,24 @@
+CREATE TABLE IF NOT EXISTS passengers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    travel_history TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS routes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    origin TEXT NOT NULL,
+    destination TEXT NOT NULL,
+    distance REAL NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS discounts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    passenger_id INTEGER,
+    route_id INTEGER,
+    discount_value REAL NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (passenger_id) REFERENCES passengers(id),
+    FOREIGN KEY (route_id) REFERENCES routes(id)
+);

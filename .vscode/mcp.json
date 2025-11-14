@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "github-mcp": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "type": "http"
+    },
+    "synth-local": {
+      "type": "http",
+      "url": "http://127.0.0.1:8010/mcp"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+# GitHub Copilot instructions are included in repo for training
+# Other .github files may be user-specific
+.github/*
+!.github/copilot-instructions.md
+!.github/instructions/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+!.vscode/mcp.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment variables
+.env
+*.env
+
+# Data files
+airline-discount-ml/data/*
